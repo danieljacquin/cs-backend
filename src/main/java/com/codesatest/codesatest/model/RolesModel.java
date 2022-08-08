@@ -1,11 +1,16 @@
 package com.codesatest.codesatest.model;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Data
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "roles")
 public class RolesModel {
 
@@ -16,4 +21,8 @@ public class RolesModel {
 
     @Column(name = "name")
     private String name;
+
+    @OneToMany(mappedBy = "rolesModel")
+    @JsonIgnore
+    private List<UsersModel> usersModels;
 }

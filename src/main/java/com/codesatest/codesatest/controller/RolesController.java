@@ -37,7 +37,7 @@ public class RolesController {
         return new ResponseEntity<WrapperResponse<RolDto>>(rolesService.update(rolDto), HttpStatus.OK);
     }
 
-    @DeleteMapping("delete")
+    @DeleteMapping("delete/{id}")
     public ResponseEntity<WrapperResponse<String>> delete(@PathVariable Long id){
         return new ResponseEntity<WrapperResponse<String>>(rolesService.delete(id), HttpStatus.OK);
     }

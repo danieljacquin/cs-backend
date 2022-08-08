@@ -1,6 +1,5 @@
 package com.codesatest.codesatest.config;
 
-import com.codesatest.codesatest.dtos.ApiErrorDto;
 import com.codesatest.codesatest.exceptions.NotFoundServiceException;
 import com.codesatest.codesatest.exceptions.ValidateServiceException;
 import com.codesatest.codesatest.utils.WrapperResponse;
