@@ -26,7 +26,7 @@ public class RolesController {
     public ResponseEntity<WrapperResponse<RolDto>> create(@Valid @RequestBody RolDto rolDto){
         return new ResponseEntity<WrapperResponse<RolDto>>(rolesService.create(rolDto), HttpStatus.CREATED);
     }
-
+    @CrossOrigin
     @GetMapping("getAll")
     public ResponseEntity<WrapperResponse<List<RolDto>>> getAll(){
        return new ResponseEntity<WrapperResponse<List<RolDto>>>(rolesService.GetAll(), HttpStatus.OK);
